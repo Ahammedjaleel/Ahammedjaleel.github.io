@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automation Hub | Business Automation Solutions</title>
+
+    <title>Automation Hub | Business Solutions</title>
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -17,283 +21,399 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         body {
             font-family: Arial, sans-serif;
-            background: #F7F9FC;
-            color: #102A43;
+            background: #F4F7FB;
+            color: #172B4D;
         }
+
+        /* HEADER */
 
         .header {
-            background: white;
-            padding: 20px 30px;
-            border-bottom: 1px solid #E5EAF0;
+            background: #FFFFFF;
+            padding: 15px 25px;
+            border-bottom: 1px solid #E2E8F0;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.social-links a {
-    font-size: 23px;
-    color: #52606D;
-    text-decoration: none;
-    transition: 0.2s ease;
-}
-
-.social-links a:hover {
-    color: #1677FF;
-    transform: translateY(-3px);
-}
-
-.social-links a:first-child:hover {
-    color: #FF0000;
-}
-
-.social-links a:nth-child(2):hover {
-    color: #0A66C2;
-}
-
-.social-links a:nth-child(3):hover {
-    color: #E1306C;
-}
-
 
         .header h2 {
-            color: #0B1F3A;
+            color: #10243E;
+            font-size: 22px;
         }
 
         .header p {
-            color: #52606D;
-            margin-top: 5px;
+            color: #64748B;
+            font-size: 13px;
+            margin-top: 4px;
         }
+
+        .social-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .social-links a {
+            color: #52606D;
+            font-size: 21px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #2563EB;
+            transform: translateY(-3px);
+        }
+
+        /* MAIN LAYOUT */
 
         .container {
             display: flex;
-            min-height: calc(100vh - 85px);
+            min-height: calc(100vh - 70px);
         }
 
+        /* SIDEBAR */
+
         .sidebar {
-            width: 250px;
-            background: #0B1F3A;
+            width: 235px;
+            min-width: 235px;
+            background: #10243E;
             color: white;
-            padding: 25px 20px;
+            padding: 15px;
         }
 
         .sidebar h3 {
-            font-size: 13px;
-            color: #9FB3C8;
-            margin: 25px 0 12px;
+            font-size: 11px;
+            color: #94A3B8;
+            margin: 18px 0 7px;
+            letter-spacing: 0.7px;
         }
 
         .sidebar a {
             display: block;
-            color: white;
+            color: #FFFFFF;
             text-decoration: none;
-            padding: 11px 12px;
-            border-radius: 6px;
-            margin-bottom: 5px;
-        }
-
-        .sidebar a.active {
-            background: #1677FF;
+            padding: 7px 10px;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            font-size: 13px;
+            line-height: 1.3;
         }
 
         .sidebar a:hover {
             background: #233F60;
         }
 
-        .main {
-            flex: 1;
-            padding: 40px;
+        .sidebar a.active {
+            background: #2563EB;
         }
 
+        /* MAIN CONTENT */
+
+        .main {
+            flex: 1;
+            padding: 35px;
+            min-width: 0;
+        }
+
+        /* HERO SECTION */
+
         .hero {
-            background: white;
-            padding: 40px;
+            background: #FFFFFF;
+            padding: 35px;
             border-radius: 12px;
-            border: 1px solid #E5EAF0;
-            margin-bottom: 35px;
+            border: 1px solid #E2E8F0;
+            margin-bottom: 30px;
         }
 
         .hero h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
+            font-size: 30px;
+            margin-bottom: 12px;
+            color: #10243E;
         }
 
         .hero p {
-            color: #52606D;
+            color: #64748B;
             line-height: 1.7;
+            max-width: 700px;
         }
 
         .hero button {
-            background: #1677FF;
+            background: #2563EB;
             color: white;
             border: none;
-            padding: 13px 22px;
+            padding: 12px 22px;
             border-radius: 6px;
-            margin-top: 22px;
+            margin-top: 20px;
             cursor: pointer;
         }
 
+        .hero button:hover {
+            background: #1D4ED8;
+        }
+
+        /* SOLUTION CARDS */
+
         .section-title {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            color: #10243E;
+            font-size: 21px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
         }
 
         .card {
-            background: white;
-            padding: 25px;
-            border: 1px solid #E5EAF0;
+            background: #FFFFFF;
+            padding: 23px;
+            border: 1px solid #E2E8F0;
             border-radius: 10px;
+            transition: 0.2s;
         }
 
-        .card h3 {
-            margin-bottom: 12px;
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 18px rgba(0,0,0,0.06);
         }
 
-        .card p {
-            color: #52606D;
+        .card i {
+            font-size: 27px;
+            color: #2563EB;
             margin-bottom: 15px;
         }
 
-        .card a {
-            color: #1677FF;
-            text-decoration: none;
-            font-weight: bold;
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .card p {
+            color: #64748B;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
         }
 
         @media (max-width: 700px) {
+
             .container {
                 flex-direction: column;
             }
 
             .sidebar {
                 width: 100%;
+                min-width: 0;
             }
 
             .main {
-                padding: 20px;
+                padding: 18px;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
+
+            .header {
+                padding: 14px;
+            }
+
+            .header h2 {
+                font-size: 18px;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+
         }
+
     </style>
 </head>
 
 <body>
 
-  
-<header class="header">
-    <div>
-        <h2>AUTOMATION HUB</h2>
-        <p>Business Automation Solutions</p>
-    </div>
+    <!-- HEADER -->
 
-    <div class="social-links">
+    <header class="header">
 
-        <a href="https://www.youtube.com/@mobsanalytics"
-           target="_blank" title="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
+        <div>
+            <h2>AUTOMATION HUB</h2>
+            <p>Business Automation & Digital Solutions</p>
+        </div>
 
-        <a href="https://www.linkedin.com/in/ahammed-jaleel-33772b5b/"
-           target="_blank" title="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
+        <div class="social-links">
 
-        <a href="https://www.instagram.com/mobsanalytics/"
-           target="_blank" title="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
+            <a href="https://www.youtube.com/@mobsanalytics"
+               target="_blank" rel="noopener noreferrer"
+               title="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
 
-    </div>
-</header>
+            <a href="https://www.linkedin.com/in/ahammed-jaleel-33772b5b/"
+               target="_blank" rel="noopener noreferrer"
+               title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
 
+            <a href="https://www.instagram.com/mobsanalytics/"
+               target="_blank" rel="noopener noreferrer"
+               title="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTAINER -->
 
     <div class="container">
 
+
+        <!-- SIDEBAR MENU -->
+
         <aside class="sidebar">
 
-            <a href="#" class="active">⌂ Home</a>
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
+
 
             <h3>INDUSTRIES</h3>
+
             <a href="#">Insurance</a>
             <a href="#">Hospitality</a>
-            <a href="#">Travel</a>
+            <a href="#">Travel & Tourism</a>
             <a href="#">Rent a Car</a>
+            <a href="#">Real Estate</a>
+            <a href="#">Healthcare</a>
+            <a href="#">Retail</a>
+            <a href="#">Construction</a>
+
 
             <h3>DEPARTMENTS</h3>
+
             <a href="#">Finance & Accounts</a>
-            <a href="#">HR</a>
+            <a href="#">Human Resources</a>
             <a href="#">Operations</a>
+            <a href="#">Production</a>
+            <a href="#">Procurement</a>
+            <a href="#">Sales & Marketing</a>
+            <a href="#">Customer Service</a>
+
+
+            <h3>SOLUTIONS</h3>
+
+            <a href="#">Business Automation</a>
+            <a href="#">Business Applications</a>
+            <a href="#">BI & Analytics</a>
+
 
             <h3>TECHNOLOGIES</h3>
+
             <a href="#">n8n</a>
             <a href="#">Power Automate</a>
+            <a href="#">Power Apps</a>
+            <a href="#">Power BI</a>
             <a href="#">Make.com</a>
 
+
             <h3>CONTACT</h3>
-            <a href="#">✉ Contact Me</a>
+
+            <a href="#">
+                <i class="fa-regular fa-envelope"></i>
+                Contact Me
+            </a>
 
         </aside>
 
+
+        <!-- MAIN CONTENT AREA -->
+
         <main class="main">
 
+
             <section class="hero">
-                <h1>Business Automation Solutions</h1>
+
+                <h1>Business Automation & Digital Solutions</h1>
 
                 <p>
-                    Explore practical automation workflows
-                    designed to reduce manual work,
+                    Explore practical business automation workflows,
+                    custom business applications and interactive
+                    dashboards designed to reduce manual work,
                     save time and improve business efficiency.
                 </p>
 
-                <button>Explore Workflows</button>
+                <button>Explore Solutions</button>
+
             </section>
 
-            <h2 class="section-title">Featured Workflows</h2>
+
+            <h2 class="section-title">
+                Our Solutions
+            </h2>
+
 
             <section class="cards">
 
-                <div class="card">
-                    <h3>Invoice Automation</h3>
-                    <p>Automate invoice processing and data extraction.</p>
-                    <a href="#">Watch Video →</a>
-                </div>
 
                 <div class="card">
-                    <h3>Employee Expense Automation</h3>
-                    <p>Simplify expense claims using AI and automation.</p>
-                    <a href="#">Watch Video →</a>
+
+                    <i class="fa-solid fa-gears"></i>
+
+                    <h3>Business Automation</h3>
+
+                    <p>
+                        Automate repetitive business processes
+                        using n8n, Power Automate and Make.com.
+                    </p>
+
                 </div>
 
-                <div class="card">
-                    <h3>Supplier Invoice Automation</h3>
-                    <p>Reduce manual supplier invoice entry.</p>
-                    <a href="#">Watch Video →</a>
-                </div>
 
                 <div class="card">
-                    <h3>WhatsApp Receptionist</h3>
-                    <p>Automate customer enquiries and responses.</p>
-                    <a href="#">Watch Video →</a>
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    <h3>Business Applications</h3>
+
+                    <p>
+                        Build custom business applications
+                        using Microsoft Power Apps.
+                    </p>
+
                 </div>
+
+
+                <div class="card">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <h3>BI & Analytics</h3>
+
+                    <p>
+                        Create interactive dashboards and
+                        business reports using Power BI.
+                    </p>
+
+                </div>
+
 
             </section>
+
 
         </main>
 

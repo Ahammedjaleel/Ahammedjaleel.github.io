@@ -196,6 +196,174 @@
             line-height: 1.6;
         }
 
+/* HOMEPAGE IMPROVEMENTS */
+
+.hero {
+    background: linear-gradient(120deg, #10243E, #1E4775);
+    color: white;
+    padding: 42px;
+    border-radius: 12px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 34px;
+    margin-top: 15px;
+}
+
+.hero p {
+    color: #D7E2F0;
+}
+
+.hero-tag,
+.featured-label {
+    color: #93C5FD;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero button {
+    background: #2563EB;
+}
+
+.featured-section,
+.popular-section,
+.explore-section,
+.other-solutions {
+    margin-bottom: 35px;
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.featured-info {
+    padding: 28px;
+}
+
+.featured-info h2 {
+    margin: 15px 0;
+    color: #10243E;
+    font-size: 24px;
+}
+
+.featured-info p,
+.section-description {
+    color: #64748B;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 230px;
+    object-fit: cover;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 18px 0;
+}
+
+.tags span,
+.card-tag {
+    background: #EFF6FF;
+    color: #2563EB;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.watch-btn {
+    background: #2563EB;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.section-title i {
+    color: #2563EB;
+    margin-right: 7px;
+}
+
+.card-tag {
+    margin-top: 5px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 9px;
+    padding: 22px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-card:hover {
+    border-color: #2563EB;
+    transform: translateY(-3px);
+}
+
+.category-card i {
+    color: #2563EB;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.category-card h3 {
+    font-size: 14px;
+}
+
+
+/* HOMEPAGE MOBILE LAYOUT */
+
+@media (max-width: 900px) {
+
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image img {
+        max-height: 250px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        padding: 25px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+}
+
         /* RESPONSIVE DESIGN */
 
         @media (max-width: 900px) {
@@ -343,81 +511,267 @@
 
         <!-- MAIN CONTENT AREA -->
 
-        <main class="main">
+      
+<!-- MAIN CONTENT AREA -->
+
+<main class="main">
+
+    <!-- WELCOME SECTION -->
+
+    <section class="hero">
+
+        <span class="hero-tag">
+            BUSINESS AUTOMATION & AI SOLUTIONS
+        </span>
+
+        <h1>
+            Smarter Workflows.<br>
+            Intelligent Business.
+        </h1>
+
+        <p>
+            Discover practical AI automation workflows,
+            intelligent business applications and powerful
+            analytics solutions designed to simplify
+            business operations.
+        </p>
+
+        <button onclick="document.getElementById('featured').scrollIntoView({behavior:'smooth'})">
+            Explore Automations
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </section>
 
 
-            <section class="hero">
+    <!-- FEATURED AUTOMATION -->
 
-                <h1>Business Automation & Digital Solutions</h1>
+    <section class="featured-section" id="featured">
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Featured AI Automation
+        </h2>
+
+        <div class="featured-card">
+
+            <div class="featured-info">
+
+                <span class="featured-label">
+                    FEATURED SOLUTION
+                </span>
+
+                <h2>AI-Powered Invoice Processing</h2>
 
                 <p>
-                    Explore practical business automation workflows,
-                    custom business applications and interactive
-                    dashboards designed to reduce manual work,
-                    save time and improve business efficiency.
+                    Automatically read supplier invoices,
+                    extract important information using AI,
+                    validate invoice data and send the
+                    processed information to your accounting
+                    system.
                 </p>
 
-                <button>Explore Solutions</button>
-
-            </section>
-
-
-            <h2 class="section-title">
-                Our Solutions
-            </h2>
-
-
-            <section class="cards">
-
-
-                <div class="card">
-
-                    <i class="fa-solid fa-gears"></i>
-
-                    <h3>Business Automation</h3>
-
-                    <p>
-                        Automate repetitive business processes
-                        using n8n, Power Automate and Make.com.
-                    </p>
-
+                <div class="tags">
+                    <span>n8n</span>
+                    <span>AI Automation</span>
+                    <span>Finance</span>
                 </div>
 
+                <button class="watch-btn">
+                    <i class="fa-solid fa-play"></i>
+                    Watch Demonstration
+                </button>
 
-                <div class="card">
+            </div>
 
-                    <i class="fa-solid fa-mobile-screen-button"></i>
+            <div class="featured-image">
 
-                    <h3>Business Applications</h3>
+                <img
+                src="https://placehold.co/600x400/10243E/FFFFFF?text=AI+Invoice+Processing"
+                alt="AI Invoice Processing">
 
-                    <p>
-                        Build custom business applications
-                        using Microsoft Power Apps.
-                    </p>
+            </div>
 
-                </div>
+        </div>
 
-
-                <div class="card">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                    <h3>BI & Analytics</h3>
-
-                    <p>
-                        Create interactive dashboards and
-                        business reports using Power BI.
-                    </p>
-
-                </div>
+    </section>
 
 
-            </section>
+    <!-- POPULAR AUTOMATIONS -->
+
+    <section class="popular-section">
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-fire"></i>
+            Popular Automations
+        </h2>
+
+        <p class="section-description">
+            Explore practical automation solutions
+            for everyday business challenges.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+                <h3>Invoice Automation</h3>
+
+                <p>
+                    Automate invoice processing,
+                    data extraction and validation.
+                </p>
+
+                <span class="card-tag">AI + n8n</span>
+
+            </div>
 
 
-        </main>
+            <div class="card">
 
-    </div>
+                <i class="fa-brands fa-whatsapp"></i>
 
-</body>
-</html>
+                <h3>AI WhatsApp Assistant</h3>
+
+                <p>
+                    Automatically respond to customer
+                    enquiries and manage conversations.
+                </p>
+
+                <span class="card-tag">AI Automation</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-receipt"></i>
+
+                <h3>Expense Automation</h3>
+
+                <p>
+                    Simplify employee expense claims
+                    and approval processes.
+                </p>
+
+                <span class="card-tag">n8n</span>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>HR Automation</h3>
+
+                <p>
+                    Automate employee onboarding
+                    and HR administrative tasks.
+                </p>
+
+                <span class="card-tag">Power Automate</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORE INDUSTRIES -->
+
+    <section class="explore-section">
+
+        <h2 class="section-title">
+            Explore Solutions by Industry
+        </h2>
+
+        <p class="section-description">
+            Find automation solutions designed
+            for your business industry.
+        </p>
+
+        <div class="category-grid">
+
+            <div class="category-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h3>Insurance</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-hotel"></i>
+                <h3>Hospitality</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-plane"></i>
+                <h3>Travel & Tourism</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-car"></i>
+                <h3>Rent a Car</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h3>Healthcare</h3>
+            </div>
+
+            <div class="category-card">
+                <i class="fa-solid fa-building"></i>
+                <h3>Real Estate</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OTHER SOLUTIONS -->
+
+    <section class="other-solutions">
+
+        <h2 class="section-title">
+            Other Digital Solutions
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <h3>Business Applications</h3>
+
+                <p>
+                    Custom business applications
+                    developed using Microsoft Power Apps.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>BI & Analytics</h3>
+
+                <p>
+                    Interactive business dashboards,
+                    reporting and insights using Power BI.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
